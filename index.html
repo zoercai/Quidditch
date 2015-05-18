@@ -5,54 +5,102 @@
   <title>SQRL</title>
   <meta name="description" content="">
 
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="js/vegas/vegas.min.css">
+  <script src="js/vegas/vegas.min.js"></script>
+
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul class="mainNav">
-        <li><a href=""><img id="logo" src="images/logo.png"></a></li>
-        <li><a href=" ">About </a></li>
-        <li><a href=" ">Schedule </a></li>
-        <li><a href=" ">Teams </a></li>
-        <li><a href=" ">Leaderboard </a></li>
-        <li><a href=" ">Help </a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="wrapper">
 
-  <div id="banner">
-    Team registrations <br/> now open<br/>
-    <div id="mainButton">Register Now</div>
-  </div>
+    <header>
+      <nav>
+        <ul id="mainNav">
+          <li><a href=""><img id="logo" src="images/logo.png"></a></li>
+          <li><a href=" ">About </a></li>
+          <li><a href=" ">Schedule </a></li>
+          <li><a href=" ">Teams </a></li>
+          <li><a href=" ">Leaderboard </a></li>
+          <li><a href=" ">Help </a></li>
+          <li><a href=" ">Zoe</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <div id="news">
-      <div class="panels">
-        <h3> PLAYER HIGHLIGHT </h3>
-        <img class="panelImg" src="images/panel1.jpg">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ipsam, ullam eligendi quod architecto culpa commodi, laborum illum reiciendis ratione vel dolor vero voluptatibus minima pariatur necessitatibus veniam ipsa! Officiis.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero mollitia ea culpa quidem, facere, sapiente deserunt incidunt sit quod atque veniam maiores sunt officiis eaque sint quibusdam necessitatibus veritatis odit.
-      </div>
-      <div class="panels">
-        <h3> PLAYER HIGHLIGHT </h3>
-        <img class="panelImg" src="images/panel1.jpg">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ipsam, ullam eligendi quod architecto culpa commodi, laborum illum reiciendis ratione vel dolor vero voluptatibus minima pariatur necessitatibus veniam ipsa! Officiis.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero mollitia ea culpa quidem, facere, sapiente deserunt incidunt sit quod atque veniam maiores sunt officiis eaque sint quibusdam necessitatibus veritatis odit.
-      </div>
-      <div class="panels">
-        <h3> PLAYER HIGHLIGHT </h3>
-        <img class="panelImg" src="images/panel1.jpg">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ipsam, ullam eligendi quod architecto culpa commodi, laborum illum reiciendis ratione vel dolor vero voluptatibus minima pariatur necessitatibus veniam ipsa! Officiis.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero mollitia ea culpa quidem, facere, sapiente deserunt incidunt sit quod atque veniam maiores sunt officiis eaque sint quibusdam necessitatibus veritatis odit.
+    <div id="banner">
+      <div id="bannerContent">
+      Team registrations <br/> now open<br/>
+      <div id="mainButton">Register Now</div>
       </div>
     </div>
 
+    <main>
+      <div id="news">
+        <div class="panels">
+          <h3> PLAYER HIGHLIGHT </h3>
+          <img class="panelImg" src="images/panel1.jpg">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ipsam, ullam eligendi quod architecto culpa commodi, laborum illum reiciendis ratione vel dolor vero voluptatibus minima pariatur necessitatibus veniam ipsa! Officiis.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero mollitia ea culpa quidem, facere, sapiente deserunt incidunt sit quod atque veniam maiores sunt officiis eaque sint quibusdam necessitatibus veritatis odit.
+        </div>
+        <div class="panels">
+          <h3> PLAYER HIGHLIGHT </h3>
+          <img class="panelImg" src="images/panel1.jpg">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ipsam, ullam eligendi quod architecto culpa commodi, laborum illum reiciendis ratione vel dolor vero voluptatibus minima pariatur necessitatibus veniam ipsa! Officiis.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero mollitia ea culpa quidem, facere, sapiente deserunt incidunt sit quod atque veniam maiores sunt officiis eaque sint quibusdam necessitatibus veritatis odit.
+        </div>
+        <div class="panels">
+          <h3> PLAYER HIGHLIGHT </h3>
+          <img class="panelImg" src="images/panel1.jpg">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ipsam, ullam eligendi quod architecto culpa commodi, laborum illum reiciendis ratione vel dolor vero voluptatibus minima pariatur necessitatibus veniam ipsa! Officiis.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero mollitia ea culpa quidem, facere, sapiente deserunt incidunt sit quod atque veniam maiores sunt officiis eaque sint quibusdam necessitatibus veritatis odit.
+        </div>
+      </div>
     </main>
 
+    <footer>
+      <div id="sitemap">
+        <ul id="sitemapList">
+        SITEMAP
+          <li><a href=" ">HOME</li>
+          <li><a href=" ">About </a></li>
+          <li><a href=" ">Schedule </a></li>
+          <li><a href=" ">Teams </a></li>
+          <li><a href=" ">Leaderboard </a></li>
+          <li><a href=" ">Help </a></li>
+        </ul>
+      </div>
+    </footer>
 
+  </div>
+
+  <script type="text/javascript">
+    $('#banner').vegas({
+      slides: [
+      { src: 'images/bg1.jpg' },
+      { src: 'images/bg2.jpg' },
+      { src: 'images/bg3.jpg' }
+      ]
+    });
+
+    //When div reaches top, change navbar to opaque
+    var distance = $('#bannerContent').offset().top,
+    $window = $(window);
+
+    $window.scroll(function() {
+      if ( $window.scrollTop() >= distance - 200) {
+        // Your div has reached the top
+        $( "#mainNav" ).css("background","rgba(0,0,0,0.8) url('images/gradient.png') repeat-x 0px");
+      } else{
+        $( "#mainNav" ).css("background","url('images/gradient.png') repeat-x -20px");
+      }
+    });
+
+ </script>
 
   </body>
   </html>

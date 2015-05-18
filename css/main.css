@@ -1,23 +1,29 @@
 body{
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	background: #000000 url('../images/bg1.jpg') no-repeat 0 -100px fixed;
+	/*background: #000000 url('../images/bg1.jpg') no-repeat 0 -100px fixed;*/
+	background-color: #000000;
+}
+
+#wrapper{
+	min-height:100%;
+	position:relative;
 }
 
 header{
+	z-index: 200;
 	position: fixed;
 	width:100%;
 }
 
-
-.mainNav{
+#mainNav{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     padding-top: 30px;
-    padding-bottom: 30px;
-    background-image: url('../images/gradient.png');
-    background-repeat: repeat-x;
+    background: transparent url('../images/gradient.png') repeat-x -20px;
+    -webkit-transition:width 2s, height 2s, background-color 1s, -webkit-transform 1s;
+    transition:width 2s, height 2s, background-color 1s, transform 1s;
 }
 
 nav li {
@@ -25,6 +31,17 @@ nav li {
     display: inline;
     vertical-align: middle;
     line-height: 100px;
+}
+
+nav li:last-child{
+	float:right;
+	margin-right: 160px;
+	text-align: right;
+}
+
+nav li:last-child a{
+	text-align: right;
+	margin:auto;
 }
 
 nav li a{
@@ -43,11 +60,16 @@ nav li a{
 #banner{
 	color: #dadada;
 	position: relative;
-	top:300px;
+	padding-top:300px;
 	font-size: 50px;
-	margin-left: 160px;
+	padding-left: 160px;
 	text-transform: uppercase;
 	line-height: 70px;
+	padding-bottom: 450px;
+}
+
+#bannerContent{
+	z-index:90;
 }
 
 #mainButton{
@@ -63,8 +85,7 @@ nav li a{
 main{
 	background: #000000 url('../images/darkTex.png') repeat;
 	position: relative;
-	top: 750px;
-	
+	margin-bottom: 30px;
 }
 
 #news{
@@ -72,6 +93,7 @@ main{
 	margin-right: 160px;
 	position: relative;
 	top: -100px;
+	padding-bottom: 50px;
 }
 
 .panels{
@@ -92,3 +114,29 @@ main{
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+footer{
+	background-color: #000000;
+	position: absolute;
+	bottom: 0;
+	width:100%;
+}
+
+footer #sitemap{
+	color: #dadada;
+	padding-left: 160px;
+	padding-top: 50px;
+	display: inline-block;
+	width: 30%;
+}
+
+footer li{
+	list-style-type: none;
+}
+
+footer #sitemap a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+}
+
