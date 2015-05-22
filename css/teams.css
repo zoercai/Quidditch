@@ -274,6 +274,7 @@ footer{
 	width:50%;
 	margin:25%;
 	margin-top:10vh;
+	margin-bottom: 20px;
 	min-height: 80vh;
 	background: #dadada;
 }
@@ -364,6 +365,44 @@ footer{
 
 .buttonCluster .button p{
 	padding:20px;
+}
+
+.skills{
+	margin-top:10px;
+	margin-bottom: 15px;
+}
+
+/*http://codepen.io/mitchmc/pen/pebIx*/
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 10px;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     background-color:white;
+}
+
+input[type="radio"]:checked + label span{
+     background-color:black;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
 }
 
 
