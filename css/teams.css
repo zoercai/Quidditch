@@ -311,7 +311,11 @@ footer{
 }
 
 .basics>*{
-	margin-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+.basics>*:nth-child(2n){
+	margin-bottom: 35px;
 }
 
 .basics>.nameInput{
@@ -370,6 +374,16 @@ footer{
 .skills{
 	margin-top:10px;
 	margin-bottom: 15px;
+}
+
+input[type='text']{
+	border: gray;
+	border-radius: 3px;
+}
+
+textarea{
+	border: gray;
+	border-radius: 3px;
 }
 
 /*http://codepen.io/mitchmc/pen/pebIx*/
