@@ -118,6 +118,8 @@
 
     <h4>* Team Description</h4>
     <textarea name="description" id="descInput" cols="47" rows="15"></textarea>
+
+    <div id="note">Note: Questions with * in front are compulsory.</div>
   </div>
 
   <div class="memberAdd">
@@ -208,6 +210,16 @@
     $(".darkRoom").click(function(){
       $(".teamPopup").css("display","none");
       $(".darkRoom").css("display","none");
+    })
+
+    $("#submit").click(function(){
+      $(".darkRoom").css("display","none");
+      $(".CreatePopup").css("display","none");
+    })
+
+    $("#cancel").click(function(){
+      $(".darkRoom").css("display","none");
+      $(".CreatePopup").css("display","none");
     })
 
   </script>
