@@ -119,6 +119,31 @@ main{
 	padding:10px;
 }
 
+#yesteam{
+	display: none;
+	text-align: center;
+}
+
+#yesteam h4{
+	text-transform: uppercase;
+}
+
+#yesteam p{
+	margin-bottom: 30px;
+}
+
+#yesteam>*{
+	width:90%;
+	margin: auto;
+}
+
+#yesteam #teamavi{
+	width: 40%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
 .left .button{
 	background: rgba(218,218,218,0.7);
 	position: absolute;
@@ -267,7 +292,7 @@ footer{
 }
 
 .CreatePopup{
-	/*display:none;*/
+	display:none;
 	z-index: 3000;
 	position:absolute;
 	top:0;
@@ -279,7 +304,7 @@ footer{
 	background: #dadada;
 }
 
-.CreatePopup .title{
+.title{
 	width:100%;
 	background: rgba(0,0,0,0.8);
 	margin:0;
@@ -287,7 +312,7 @@ footer{
 	color: #dadada;
 }
 
-.CreatePopup .aviContainer{
+.aviContainer{
 	margin-top: 30px;
 	margin-left: 5%;
 	width: 42%;
@@ -296,10 +321,10 @@ footer{
 	display: inline-block;
 }
 
-.CreatePopup .aviContainer .avatar{
+.aviContainer .avatar{
 	width:100%;
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .basics{
@@ -315,7 +340,7 @@ footer{
 }
 
 .basics>*:nth-child(2n){
-	margin-bottom: 32px;
+	margin-bottom: 35px;
 }
 
 .basics>.nameInput{
@@ -390,6 +415,7 @@ textarea{
 
 div #note{
 	font-size: 10pt;
+	font-style: italic;
 }
 
 /*http://codepen.io/mitchmc/pen/pebIx*/
@@ -434,21 +460,28 @@ input[type="radio"]:checked + label span {
 }
 
 
-
+/*Team Profile Popup*/
 
 
 .teamPopup{
-	display:none;
+	/*display:none;*/
 	z-index: 3000;
 	position:absolute;
 	top:0;
 	width:70%;
 	margin:15%;
 	margin-top:10vh;
-	min-height: 80vh;
+	/*min-height: 80vh;*/
 	background: #dadada;
 }
 
+#teamName{
+	font-size: 30pt;
+}
+
+#teamDivision{
+	font-size: 15pt;
+}
 
 
 

@@ -39,9 +39,23 @@
       <div id="content">
         <div class="left">
           <div class="title"> <h3> MY TEAM </h3> </div>
-          <p> <br/> You don't have a team yet. <br/>
+          <p id="noteam"> <br/> You don't have a team yet. <br/>
             Either click 'Create a Team' below to create a new team, or browse the teams on the right to join an existing team.</p>
-            <div class="button"> <p> Create a Team </p></div>
+            
+            <div id="yesteam">
+              <img id="teamavi" src="images/noavi.png">
+              <h4>Team Name</h4>
+              <p>Porkchops</p>
+              <h4>Team Division</h4>
+              <p>Adult Casual</p>
+              <h4>Team description</h4>
+              <p>Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!</p>
+              <h4>Team Members</h4>
+              <p>You have invited members, but no one has accepted yet!</p>
+            </div>
+
+
+            <div class="button" id="createButton"> <p> Create a Team </p> </div>
           </div><div class="right">
           <div class="title"> 
             <h3> Browse Teams </h3>
@@ -108,12 +122,12 @@
     
     <h4>* Skill Level</h4>
     <div class="skills">
-    <input type="radio" id="casual" name="level" />
-    <label for="casual"><span></span>Casual</label>
-    <input type="radio" id="serious" name="level" />
-    <label for="serious"><span></span>Serious</label>
-    <input type="radio" id="legendary" name="level" />
-    <label for="legendary"><span></span>Legendary</label>
+      <input type="radio" id="casual" name="level" />
+      <label for="casual"><span></span>Casual</label>
+      <input type="radio" id="serious" name="level" />
+      <label for="serious"><span></span>Serious</label>
+      <input type="radio" id="legendary" name="level" />
+      <label for="legendary"><span></span>Legendary</label>
     </div>
 
     <h4>* Team Description</h4>
@@ -159,14 +173,37 @@
   </div>
   
   <div class="buttonCluster">
-  <div class="button" id="cancel">Cancel</div>
-  <div class="button" id="submit">Submit</div>
+    <div class="button" id="cancel">Cancel</div>
+    <div class="button" id="submit">Submit</div>
   </div>
 
 </div>
 
+
+
+<!-- Start of Team Profile Popup -->
+
 <div class="teamPopup">
-  <h3>Team</h3>
+  <div class="title">
+    <h3>Team Profile</h3>
+  </div>
+  <div class="aviContainer">
+    <img class="avatar" src="images/noavi.png">
+  </div>
+
+  <div class="basics">
+  <h4 id="teamName"> Grinfindor </h4>
+    <p id="teamDivision"> Adult serious</p>
+
+    <h4>Team Description</h4>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora magnam facere, dignissimos repudiandae vero dolore quis nam voluptatibus mollitia optio, neque, quae. Alias incidunt quo accusamus sint, cumque, omnis eveniet.</p>
+
+    <h4> Match History </h4>
+    <p>Matches have not started yet!</p>
+
+    <h4> Upcoming Matches </h4>
+    <p> Schedule will be published after Sorting Week </p>
+  </div>
 </div>
 
 <script src="js/jquery-2.1.4.min.js"></script>
@@ -215,6 +252,12 @@
     $("#submit").click(function(){
       $(".darkRoom").css("display","none");
       $(".CreatePopup").css("display","none");
+      $("#noteam").css("display","none");
+      $("#yesteam").css("display","initial");
+      $('#createButton>p').text("Edit Team");
+      $('.nameInput').val("Porkchops");
+      $('#casual').prop("checked", true);
+      $('#descInput').val("Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!")
     })
 
     $("#cancel").click(function(){
