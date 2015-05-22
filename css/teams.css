@@ -263,6 +263,10 @@ main{
 	height: 300px;
 }
 
+#porkchopTile{
+	display: none;
+}
+
 footer{
 	background-color: #000000;
 	position: absolute;
@@ -288,7 +292,7 @@ footer{
 	background: rgba(0,0,0,0.85);
 	width:100%;
 	height:100vh;
-	/*display: none;*/
+	display: none;
 }
 
 .CreatePopup{
@@ -464,14 +468,13 @@ input[type="radio"]:checked + label span {
 
 
 .teamPopup{
-	/*display:none;*/
+	display:none;
 	z-index: 3000;
 	position:absolute;
 	top:0;
 	width:70%;
 	margin:15%;
 	margin-top:10vh;
-	/*min-height: 80vh;*/
 	background: #dadada;
 }
 

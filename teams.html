@@ -63,33 +63,37 @@
           <div class="teams">
             <div class="tile" style="background-image:url(images/panel7.jpg);">
               <div class="overlay">
-                <h4>Grinfindor</h4>
+                <h4>Team Name</h4>
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
               </div>
             </div><div class="tile" style="background-image:url(images/panel2.jpg);">
             <div class="overlay">
-              <h4>Grinfindor</h4>
+              <h4>Team Name</h4>
               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
             </div>
           </div><div class="tile" style="background-image:url(images/panel3.jpg);">
           <div class="overlay">
-            <h4>Grinfindor</h4>
+            <h4>Team Name</h4>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
           </div>
         </div><div class="tile" style="background-image:url(images/panel4.jpg);">
         <div class="overlay">
-          <h4>Grinfindor</h4>
+          <h4>Team Name</h4>
           <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
         </div>
       </div><div class="tile" style="background-image:url(images/panel5.jpg);">
       <div class="overlay">
-        <h4>Grinfindor</h4>
+        <h4>Team Name</h4>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
       </div>
-    </div><div class="tile" style="background-image:url(images/panel8.jpg);">
+    </div><!-- <div class="tile" style="background-image:url(images/panel8.jpg);">
     <div class="overlay">
       <h4>Grinfindor</h4>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
+    </div> --><div class="tile" id="porkchopTile" style="background-image:url(images/noavi.png);">
+    <div class="overlay">
+      <h4>Porkchops</h4>
+      <p>Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!</p>
     </div>
   </div>
 </div>
@@ -183,7 +187,7 @@
 
 <!-- Start of Team Profile Popup -->
 
-<div class="teamPopup">
+<div class="teamPopup" id="normalPop">
   <div class="title">
     <h3>Team Profile</h3>
   </div>
@@ -192,11 +196,41 @@
   </div>
 
   <div class="basics">
-  <h4 id="teamName"> Grinfindor </h4>
+  <h4 id="teamName"> Team Name </h4>
     <p id="teamDivision"> Adult serious</p>
 
     <h4>Team Description</h4>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora magnam facere, dignissimos repudiandae vero dolore quis nam voluptatibus mollitia optio, neque, quae. Alias incidunt quo accusamus sint, cumque, omnis eveniet.</p>
+   <!--  
+    <h4>Team Members</h4>
+     -->
+
+    <h4> Match History </h4>
+    <p>Matches have not started yet!</p>
+
+    <h4> Upcoming Matches </h4>
+    <p> Schedule will be published after Sorting Week </p>
+  </div>
+</div>
+
+
+<div class="teamPopup" id="porkPop">
+  <div class="title">
+    <h3>Team Profile</h3>
+  </div>
+  <div class="aviContainer">
+    <img class="avatar" src="images/noavi.png">
+  </div>
+
+  <div class="basics">
+  <h4 id="teamName"> PorkChops </h4>
+    <p id="teamDivision"> Adult Casual</p>
+
+    <h4>Team Description</h4>
+    <p>Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!</p>
+   <!--  
+    <h4>Team Members</h4>
+     -->
 
     <h4> Match History </h4>
     <p>Matches have not started yet!</p>
@@ -239,9 +273,14 @@
     $('#my-select').multiSelect();
 
     //popup Team
-    $(".overlay").click(function(){
+    $(".overlay").click(function(e){
       $(".darkRoom").css("display","initial");
-      $(".teamPopup").css("display","initial");
+      if($(e.target).parents('#porkchopTile').length){
+        $("#porkPop").css("display","initial");
+      } else{
+        $("#normalPop").css("display","initial");
+      }
+      
     })
 
     $(".darkRoom").click(function(){
@@ -257,7 +296,8 @@
       $('#createButton>p').text("Edit Team");
       $('.nameInput').val("Porkchops");
       $('#casual').prop("checked", true);
-      $('#descInput').val("Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!")
+      $('#descInput').val("Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!");
+      $('#porkchopTile').css("display","inline-block");
     })
 
     $("#cancel").click(function(){
