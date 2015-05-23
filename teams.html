@@ -21,10 +21,10 @@
           <li><a href="index.html"><img id="logo" src="images/logo.png"></a></li>
           <li><a href=" ">About </a></li>
           <li><a href=" ">Schedule </a></li>
-          <li><a href=" ">Teams </a></li>
+          <li><a href=" " style="font-weight:bolder;">Teams </a></li>
           <li><a href=" ">Leaderboard </a></li>
           <li><a href=" ">Help </a></li>
-          <li><a href=" ">Zoe</a></li>
+          <li><a href=" " style="font-weight: bolder;font-size: 20px;">Zoe</a></li>
         </ul>
       </nav>
     </header>
@@ -38,7 +38,7 @@
     <main>
       <div id="content">
         <div class="left">
-          <div class="title"> <h3> MY TEAM </h3> </div>
+          <div class="title"> <h3> my team </h3> </div>
           <p id="noteam"> <br/> You don't have a team yet. <br/>
             Either click 'Create a Team' below to create a new team, or browse the teams on the right to join an existing team.</p>
             
@@ -60,32 +60,72 @@
           <div class="title"> 
             <h3> Browse Teams </h3>
           </div>
+          
+          <!-- <p style="display:inline-block">Division Filter</p> -->
+          <select id="divisionFilter" style="display:inline-block">
+            <option value="all">Division Filter</option>
+            <option value="kids">Kids</option>
+            <option value="casual">Adult Casual</option>
+            <option value="serious">Adult Serious</option>
+            <option value="senior">Senior</option>
+            <option value="legends">Legends</option>
+          </select>
+
+          <input type="text" id="input" placeholder="Search..." class="search"/>
+
           <div class="teams">
-            <div class="tile" style="background-image:url(images/panel7.jpg);">
+            <div class="tile" style="background-image:url(images/panel7.jpg);" data-division-type="legends">
               <div class="overlay">
-                <h4>Team Name</h4>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
-              </div>
-            </div><div class="tile" style="background-image:url(images/panel2.jpg);">
-            <div class="overlay">
-              <h4>Team Name</h4>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
-            </div>
-          </div><div class="tile" style="background-image:url(images/panel3.jpg);">
-          <div class="overlay">
-            <h4>Team Name</h4>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
-          </div>
-        </div><div class="tile" style="background-image:url(images/panel4.jpg);">
-        <div class="overlay">
-          <h4>Team Name</h4>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
-        </div>
-      </div><div class="tile" style="background-image:url(images/panel5.jpg);">
-      <div class="overlay">
-        <h4>Team Name</h4>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur asperiores aspernatur ipsam dignissimos placeat quaerat veniam perspiciatis quibusdam aliquam error, doloremque expedita quam sed, labore velit eum quod nihil laborum! </p>
-      </div>
+                <h4>Gods and Monsters</h4>
+                <p> In the land of Gods and Monsters
+                  I was an Angel
+                  Living in the garden of evil
+                  Screwed up, scared, doing anything that I needed
+                  Shining like a fiery beacon </p>
+                </div>
+              </div><div class="tile" style="background-image:url(images/panel2.jpg);" data-division-type="serious" id="serious1">
+              <div class="overlay">
+                <h4>National Anthem</h4>
+                <p> He loves to romance them
+                  Reckless abandon
+                  Holdin' me for ransom
+                  Upper echelon</p>
+                </div>
+              </div><div class="tile" style="background-image:url(images/panel3.jpg);" data-division-type="serious" id="serious2">
+              <div class="overlay">
+                <h4>Born to Die</h4>
+                <p> Feet don’t fail me now
+                  Take me to the finish line
+                  Oh my heart it breaks every step that I take
+                  But I’m hoping at the gates,
+                  They’ll tell me that you’re mine </p>
+                </div>
+              </div><div class="tile" style="background-image:url(images/panel4.jpg);" data-division-type="kids">
+              <div class="overlay">
+                <h4>Dark Paradise</h4>
+                <p> nd there's no remedy
+                  For memory
+                  Your face is like a melody,
+                  It won't leave my head
+                  Your soul is haunting me
+                  And telling me
+                  That everything is fine
+                  But I wish I was dead
+                  (dead like you) </p>
+                </div>
+              </div><div class="tile" style="background-image:url(images/panel5.jpg);" data-division-type="senior">
+              <div class="overlay">
+                <h4>Young and Beautiful</h4>
+                <p> I've seen the world
+                  Done it all
+                  Had my cake now
+                  Diamonds, brilliant
+                  And Bel Air now
+                  Hot summer nights, mid July
+                  When you and I were forever wild
+                  The crazy days, city lights
+                  The way you'd play with me like a child </p>
+                </div>
     </div><!-- <div class="tile" style="background-image:url(images/panel8.jpg);">
     <div class="overlay">
       <h4>Grinfindor</h4>
@@ -113,6 +153,7 @@
 <div class="CreatePopup">
   <div class="title">
     <h3>Create Team</h3>
+    <img class="close" src="images/close.png">
   </div>
   <div class="aviContainer">
     <img class="avatar" src="images/noavi.png">
@@ -141,7 +182,7 @@
   </div>
 
   <div class="memberAdd">
-    <h4>Select Team Members</h4>
+    <h4>Invite Team Members</h4>
     <select multiple="multiple" id="my-select" name="my-select[]">
       <option value="1">Delphia Chairez</option>
       <option value="2">Albert Manion</option>
@@ -185,9 +226,102 @@
 
 
 
-<!-- Start of Team Profile Popup -->
+<!-- Start of Team Profile Popups -->
 
-<div class="teamPopup" id="normalPop">
+<div class="teamPopup" id="LegendProfile">
+  <div class="title">
+    <h3>Team Profile</h3>
+    <img class="close" src="images/close.png">
+  </div>
+  <div class="aviContainer">
+    <img class="avatar" src="images/panel7.jpg">
+  </div>
+
+  <div class="basics">
+    <h4 id="teamName"> Gods and Monsters </h4>
+    <p id="teamDivision"> Legends </p>
+
+    <h4>Team Description</h4>
+    <p> In the land of Gods and Monsters
+      I was an Angel
+      Living in the garden of evil
+      Screwed up, scared, doing anything that I needed
+      Shining like a fiery beacon</p>
+   <!--  
+    <h4>Team Members</h4>
+  -->
+
+  <h4> Match History </h4>
+  <p>Matches have not started yet!</p>
+
+  <h4> Upcoming Matches </h4>
+  <p> Schedule will be published after Sorting Week </p>
+</div>
+</div>
+
+<div class="teamPopup" id="AdultSProfile1">
+  <div class="title">
+    <h3>Team Profile</h3>
+    <img class="close" src="images/close.png">
+  </div>
+  <div class="aviContainer">
+    <img class="avatar" src="images/panel2.jpg">
+  </div>
+
+  <div class="basics">
+    <h4 id="teamName"> National Anthem </h4>
+    <p id="teamDivision"> Adult serious</p>
+
+    <h4>Team Description</h4>
+    <p> He loves to romance them
+      Reckless abandon
+      Holdin' me for ransom
+      Upper echelon</p>
+   <!--  
+    <h4>Team Members</h4>
+  -->
+
+  <h4> Match History </h4>
+  <p>Matches have not started yet!</p>
+
+  <h4> Upcoming Matches </h4>
+  <p> Schedule will be published after Sorting Week </p>
+</div>
+</div>
+
+<div class="teamPopup" id="AdultSProfile2">
+  <div class="title">
+    <h3>Team Profile</h3>
+    <img class="close" src="images/close.png">
+  </div>
+  <div class="aviContainer">
+    <img class="avatar" src="images/panel3.jpg">
+  </div>
+
+  <div class="basics">
+    <h4 id="teamName"> Born to Die </h4>
+    <p id="teamDivision"> Adult serious</p>
+
+    <h4>Team Description</h4>
+    <p> Feet don’t fail me now
+      Take me to the finish line
+      Oh my heart it breaks every step that I take
+      But I’m hoping at the gates,
+      They’ll tell me that you’re mine</p>
+   <!--  
+    <h4>Team Members</h4>
+  -->
+
+  <h4> Match History </h4>
+  <p>Matches have not started yet!</p>
+
+  <h4> Upcoming Matches </h4>
+  <p> Schedule will be published after Sorting Week </p>
+</div>
+</div>
+
+
+<!-- <div class="teamPopup" id="AdultCProfie">
   <div class="title">
     <h3>Team Profile</h3>
   </div>
@@ -196,14 +330,11 @@
   </div>
 
   <div class="basics">
-  <h4 id="teamName"> Team Name </h4>
-    <p id="teamDivision"> Adult serious</p>
+  <h4 id="teamName"> Dark Paradise </h4>
+    <p id="teamDivision"> Adult Casual</p>
 
     <h4>Team Description</h4>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora magnam facere, dignissimos repudiandae vero dolore quis nam voluptatibus mollitia optio, neque, quae. Alias incidunt quo accusamus sint, cumque, omnis eveniet.</p>
-   <!--  
-    <h4>Team Members</h4>
-     -->
 
     <h4> Match History </h4>
     <p>Matches have not started yet!</p>
@@ -211,39 +342,176 @@
     <h4> Upcoming Matches </h4>
     <p> Schedule will be published after Sorting Week </p>
   </div>
+</div> -->
+
+<div class="teamPopup" id="KidsProfile">
+  <div class="title">
+    <h3>Team Profile</h3>
+    <img class="close" src="images/close.png">
+  </div>
+  <div class="aviContainer">
+    <img class="avatar" src="images/panel4.jpg">
+  </div>
+
+  <div class="basics">
+    <h4 id="teamName"> Dark Paradise </h4>
+    <p id="teamDivision"> Kids </p>
+
+    <h4>Team Description</h4>
+    <p> And there's no remedy
+      For memory
+      Your face is like a melody,
+      It won't leave my head
+      Your soul is haunting me
+      And telling me
+      That everything is fine
+      But I wish I was dead
+      (dead like you)</p>
+   <!--  
+    <h4>Team Members</h4>
+  -->
+
+  <h4> Match History </h4>
+  <p>Matches have not started yet!</p>
+
+  <h4> Upcoming Matches </h4>
+  <p> Schedule will be published after Sorting Week </p>
+</div>
+</div>
+
+<div class="teamPopup" id="SeniorProfile">
+  <div class="title">
+    <h3>Team Profile</h3>
+    <img class="close" src="images/close.png">
+  </div>
+  <div class="aviContainer">
+    <img class="avatar" src="images/panel5.jpg">
+  </div>
+
+  <div class="basics">
+    <h4 id="teamName"> Young and Beautiful </h4>
+    <p id="teamDivision"> Seniors </p>
+
+    <h4>Team Description</h4>
+    <p> I've seen the world
+      Done it all
+      Had my cake now
+      Diamonds, brilliant
+      And Bel Air now
+      Hot summer nights, mid July
+      When you and I were forever wild
+      The crazy days, city lights
+      The way you'd play with me like a child</p>
+   <!--  
+    <h4>Team Members</h4>
+  -->
+
+  <h4> Match History </h4>
+  <p>Matches have not started yet!</p>
+
+  <h4> Upcoming Matches </h4>
+  <p> Schedule will be published after Sorting Week </p>
+</div>
 </div>
 
 
 <div class="teamPopup" id="porkPop">
   <div class="title">
     <h3>Team Profile</h3>
+    <img class="close" src="images/close.png">
   </div>
   <div class="aviContainer">
     <img class="avatar" src="images/noavi.png">
   </div>
 
   <div class="basics">
-  <h4 id="teamName"> PorkChops </h4>
+    <h4 id="teamName"> PorkChops </h4>
     <p id="teamDivision"> Adult Casual</p>
 
     <h4>Team Description</h4>
     <p>Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!</p>
    <!--  
     <h4>Team Members</h4>
-     -->
+  -->
 
-    <h4> Match History </h4>
-    <p>Matches have not started yet!</p>
+  <h4> Match History </h4>
+  <p>Matches have not started yet!</p>
 
-    <h4> Upcoming Matches </h4>
-    <p> Schedule will be published after Sorting Week </p>
-  </div>
+  <h4> Upcoming Matches </h4>
+  <p> Schedule will be published after Sorting Week </p>
+</div>
 </div>
 
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/lou-multi-select-759348a/js/jquery.multi-select.js"></script>
 
-<script type="text/javascript">
+<script>
+
+// Search Bar
+// http://jsfiddle.net/gAAth/12/
+
+var lis = $(".teams div.tile");
+var list = $.makeArray(lis.map(function(k, v) {
+  return $(v).text().toLowerCase();
+}));
+
+$("#input").keyup(function() {
+  $('#divisionFilter').val("all");
+  var userInput = $(this).val();
+  lis.each(function(index, value) {
+    $(value).toggle(list[index].indexOf(userInput) >= 0);
+  });
+});
+
+
+// Division Filter
+
+  (function () {
+    var select_val;
+    document.getElementById('divisionFilter').addEventListener('change', function () {
+      if(this.value=="casual"){
+        $("div[data-division-type='casual']").css("display","inline-block");
+        $("div[data-division-type='serious']").css("display","none");
+        $("div[data-division-type='kids']").css("display","none");
+        $("div[data-division-type='senior']").css("display","none");
+        $("div[data-division-type='legends']").css("display","none");
+      } else if(this.value=="serious"){
+        $("div[data-division-type='serious']").css("display","inline-block");
+        $("div[data-division-type='casual']").css("display","none");
+        $("div[data-division-type='kids']").css("display","none");
+        $("div[data-division-type='senior']").css("display","none");
+        $("div[data-division-type='legends']").css("display","none");
+      } else if(this.value=="kids"){
+        $("div[data-division-type='kids']").css("display","inline-block");
+        $("div[data-division-type='casual']").css("display","none");
+        $("div[data-division-type='serious']").css("display","none");
+        $("div[data-division-type='senior']").css("display","none");
+        $("div[data-division-type='legends']").css("display","none");
+      } else if(this.value=="senior"){
+        $("div[data-division-type='senior']").css("display","inline-block");
+        $("div[data-division-type='casual']").css("display","none");
+        $("div[data-division-type='kids']").css("display","none");
+        $("div[data-division-type='serious']").css("display","none");
+        $("div[data-division-type='legends']").css("display","none");
+      } else if(this.value=="legends"){
+        $("div[data-division-type='legends']").css("display","inline-block");
+        $("div[data-division-type='casual']").css("display","none");
+        $("div[data-division-type='kids']").css("display","none");
+        $("div[data-division-type='senior']").css("display","none");
+        $("div[data-division-type='serious']").css("display","none");
+      } else{
+        $("div[data-division-type='legends']").css("display","inline-block");
+        $("div[data-division-type='casual']").css("display","inline-block");
+        $("div[data-division-type='kids']").css("display","inline-block");
+        $("div[data-division-type='senior']").css("display","inline-block");
+        $("div[data-division-type='serious']").css("display","inline-block");
+      }
+    }, false);
+})();
+
+
+
+
     //When div reaches top, change navbar to opaque
     var distance = $('#bannerTeam').offset().top,
     $window = $(window);
@@ -277,35 +545,65 @@
       $(".darkRoom").css("display","initial");
       if($(e.target).parents('#porkchopTile').length){
         $("#porkPop").css("display","initial");
-      } else{
-        $("#normalPop").css("display","initial");
+      } else if($(e.target).parents('div[data-division-type="serious"]').length){
+        if($(e.target).parents('#serious1').length){
+          $("#AdultSProfile1").css("display","initial");
+        } else if($(e.target).parents('#serious2').length){
+          $("#AdultSProfile2").css("display","initial");
+        }
+        
+      } else if($(e.target).parents('div[data-division-type="casual"]').length){
+        $("#AdultCProfie").css("display","initial");
+      } else if($(e.target).parents('div[data-division-type="kids"]').length){
+        $("#KidsProfile").css("display","initial");
+      } else if($(e.target).parents('div[data-division-type="legends"]').length){
+        $("#LegendProfile").css("display","initial");
+      } else if($(e.target).parents('div[data-division-type="senior"]').length){
+        $("#SeniorProfile").css("display","initial");
       }
       
     })
 
-    $(".darkRoom").click(function(){
-      $(".teamPopup").css("display","none");
-      $(".darkRoom").css("display","none");
-    })
+$(".darkRoom").click(function(){
+  $(".teamPopup").css("display","none");
+  $(".darkRoom").css("display","none");
+})
 
-    $("#submit").click(function(){
-      $(".darkRoom").css("display","none");
-      $(".CreatePopup").css("display","none");
-      $("#noteam").css("display","none");
-      $("#yesteam").css("display","initial");
-      $('#createButton>p').text("Edit Team");
-      $('.nameInput').val("Porkchops");
-      $('#casual').prop("checked", true);
-      $('#descInput').val("Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!");
-      $('#porkchopTile').css("display","inline-block");
-    })
+$(".close").click(function(){
+  $(".teamPopup").css("display","none");
+  $(".darkRoom").css("display","none");
+  $(".CreatePopup").css("display","none");
+})
 
-    $("#cancel").click(function(){
-      $(".darkRoom").css("display","none");
-      $(".CreatePopup").css("display","none");
-    })
+$("#submit").click(function(){
+  $(".darkRoom").css("display","none");
+  $(".CreatePopup").css("display","none");
+  $("#noteam").css("display","none");
+  $("#yesteam").css("display","initial");
+  $('#createButton>p').text("Edit Team");
+  $('.nameInput').val("Porkchops");
+  $('#casual').prop("checked", true);
+  $('#descInput').val("Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!");
+  $('#porkchopTile').css("display","inline-block");
+  $('#porkchopTile').css("visibility","visible");
+  $('#porkchopTile').attr('data-division-type', 'casual');
+  $('#divisionFilter').val("all");
+  $("div[data-division-type='legends']").css("display","inline-block");
+        $("div[data-division-type='casual']").css("display","inline-block");
+        $("div[data-division-type='kids']").css("display","inline-block");
+        $("div[data-division-type='senior']").css("display","inline-block");
+        $("div[data-division-type='serious']").css("display","inline-block");
+})
 
-  </script>
+$("#cancel").click(function(){
+  $(".darkRoom").css("display","none");
+  $(".CreatePopup").css("display","none");
+})
+
+
+
+
+</script>
 
 
 </body>
