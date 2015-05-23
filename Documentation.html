@@ -1,0 +1,103 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Design Documentation</title>
+</head>
+
+
+<body>
+
+<div style="width:800px;margin:auto">
+<h1> Design Documentation </h1>
+
+<h2> a. HTA </h2>
+<img src="HTA.png" style="margin:auto;">
+<p> <em>Footnotes:</em> Click on ‘Teams” in the menu, or “Register a team” in the banner to go to the Teams page. Click “Create a Team” button. 
+Type anything into the team name and description (the “correct” info has been hardcoded in, so it doesn’t matter what is typed in).
+Invite players by clicking on the names the leftside box, and invited players will show up in the rightside box.
+Use dropdown to filter divisions, or searchbar to search for a team name/description.
+</p>
+
+
+<h2> b. Colour Scheme </h2>
+<div style="height:200px;overflow:hidden"><img src="palette.png" style="width:100%;"></div>
+<p>Colour scheme is monochrome. This is chosen so that the website colours will never clash with the content colours, whatever the content will be. A monochromatic colour scheme also caters to those with colour blindness. A light grey (#dadada) is often used instead of plain white as background for potentially big chunks of text so that the design is softer and less straining to the eye, while dark grays (#646464 and #8a877e) are used as background of buttons and smaller amount of text so that the button text can be light (#dadada) and stand out.</p>
+
+
+<h2> c. Backgrounds, Lines, Borders, etc. </h2>
+<p>Changing Quidditch images are used as page background to add interest. Other components (menu, team directory) are laid on top with translucent background so that the text in those components becomes easily readable while the background images remain visible to maintain interest to the design. Various subtle textures conforming with the colour scheme are used as background (the three divs and the bottom page background in homepage). Elements are grouped together using negative space, alignment, and section backgrounds. Rounded corners are used on team tiles to give a card-like feel, indicating that they are more than simply images.</p>
+
+
+<h2> d. Fonts </h2>
+<p>For the main body font, Helvetica Neue is the first choice, followed by Helvetica, Arial (extremely similar to Helvetica, and widely available), and finally as a last resort, any sans serif font. Helvetica is chosen as it is a neutral font and can fit into any situation, and sans serifs are proven to be easier to read on screens. The logo font is Endor, which fits with the fantasy/Harry Potter theme.</p>
+
+
+<h2> e. Assumptions and Limitations + Appreciation Tips</h2>
+<h3>Assumptions:</h3>
+<ul>
+<li>It is assumed that the computer used has Helvetica Neue font installed, and it is assumed that the screen resolution is 1920x1080. Testing was done using Chrome's Developer Tools and device emulation to set the resolution to 1920x1080.</li>
+<li>It is assumed that the player is called Zoe and has already logged in. </li>
+<li>It is also assumed that the player wants to create an adult casual team called "Porkchops" with a team description of "Team porkchop is the best team in the Quidditch casual division. Join us to win all the time!".</li>
+<li>It is assumed that the player registers for a team very early before the Sorting Week starts, so there are a relatively few number of teams created. The player browses the team directory and cannot find an adult casual team, so she creates a team herself.</li>
+<li>It is assumed that the player has entered a date of birth, and that the site has calculated the age of the player to determine that the player is an adult - and therefore only asks if she wants to play in the casual, serious, or legends level.</li>
+<li>It is assumed that the players that are invited do not accept the invitation to join the team immediately.</li>
+</ul>
+
+<h3>Limitations:</h3>
+<ul>
+<li>The About, Schedule, Leaderboard, Help, and Player Profile pages have not been implemented as they are mostly irrelevant to the task, and as there is a time constraint.</li>
+<li>Though there is an upload avatar function in the Create Team popup, an avatar cannot be uploaded because it is a front-end prototype. However if it were not, then the avatar image would be updated after the user selects an image file. Note that the upload function restricts the type of file that can be uploaded to images.</li>
+<li>Homepage content has been kept minimal due to time constraint. But the three columns give an indication of how more content can be added.</li>
+</ul>
+
+<h3>How to Appreciate the Design More:</h3>
+<ul>
+<li>The main page background changes once the slider underneath the three divs gets to the right side of the page.</li>
+<li>The menu has a black-to-transparent gradient background which makes sure the text is always readable no matter the image underneath.</li>
+<li>When scrolled down, the menu's background colour changes to slightly translucent solid gray, so that any element that goes underneath the menu doesn't make the menu text any less readable. The background changes back after scrolling back up.</li>
+<li>All buttons and menu items have transition effects which increases visibility of system status.</li>
+<li>The current page (in Teams) is in bold - also visibility of system status.</li>
+<li>When a popup opens, if you click ouside of the popup (in the darkened area), the popup is closed ==> Fitt's Law!</li>
+<li>The Team Division Filter and the search bar actually work!</li>
+</ul>
+
+
+<h2> f. Resources</h2>
+<h3>Code Used/Consulted</h3>
+<ul>
+<li>jQuery (https://jquery.com/)</li>
+<li>Html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)</li>
+<li>Vegas Slideshow (http://vegas.jaysalvat.com/)</li>
+<li>Search Bar (http://jsfiddle.net/gAAth/12/)</li>
+<li>jQuery Multiselect (http://loudev.com/)</li>
+</ul>
+<h3>Image Credits</h3>
+<ul>
+<h4>Backgrounds:</h4>
+<li>bg1: http://vignette2.wikia.nocookie.net/dumbledoresarmyroleplay/images/b/b4/New-Half-Blood-Prince-stills-Quidditch-pitch-harry-potter.jpg/revision/latest?cb=20121021205846</li>
+<li>bg2: http://www.blastr.com/sites/blastr/files/Quidditch.jpg</li>
+<li>bg3: http://www.aceshowbiz.com/images/still/harry_potter_hbp155.jpg</li>
+<li>darkTex and lightTex: subtlepatterns.com</li>
+<h4>Placeholder Images:</h4>
+<li>noavi: http://www.openrice.com/images/v4/previewImg/NoAvatar_member.png</li>
+<li>panel1: http://images-cdn.moviepilot.com/image/upload/c_fill,h_281,w_500/t_mp_quality/ron-weasley-quidditch-harry-potter-6938908-500-281-how-ron-weasley-developed-my-taste-in-people-jpeg-198204.jpg</li>
+<li>panel2: http://www.empireonline.com/images/features/photo/harry-potter-half-blood-prince/11.jpg</li>
+<li>panel3: http://images6.fanpop.com/image/photos/34100000/Chamber-of-Secrets-harry-potter-the-boy-who-lived-and-much-more-34134880-432-288.jpg</li>
+<li>panel4: http://img1.wikia.nocookie.net/__cb20140630074827/harrypotter/pl/images/9/92/Harry_Potter_(pierwszy_mecz)_2.png</li>
+<li>panel5: http://www.farfarawaysite.com/section/potter/gallery2/hires/26.jpg</li>
+<li>panel6: https://uconntact.uconn.edu/images/W460xL600/0/noshadow/Event/512c4af71d944065897ecb7694065f2f.jpg</li>
+<li>panel7: http://radiomacondo.fm/wp-content/uploads/2014/03/quidditch-buscador.jpg</li>
+<li>panel8: http://cdn3.teen.com/wp-content/gallery/hogwarts-fashion-well-miss-most/hp6d-05547.jpg</li>
+<h4>Functional image:</h4>
+<li>search: http://www.clker.com/cliparts/w/r/Q/0/x/D/search-icon-light-grey-hi.png</li>
+</ul>
+
+<br/><br/>
+<h1>Usability Check</h1>
+<p>The user was asked to search for an existing adult casual team, and if it doesn't exist, create a team herself. After creating the team, the user was asked to check the profile of the team she just created and invite three more players. The user was also asked to search for a team called "National Anthem" and find its team description.</p>
+<p>The user was able to complete all of the tasks smoothly and successfully, however she did suggest that a cross be added on the top right corner of popups for closing the popups, as clicking outside the popup area to close the popups may not be apparent to users who are less tech-savy. She also suggested making the text size bigger, however as the test was done on a smaller, lower-resolution screen than the actual 1920x1080 resolution screen, this change was not implemented.</p>
+</div>
+
+</body>
+</html>
