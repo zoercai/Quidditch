@@ -233,8 +233,8 @@ main{
 	border-radius:10px; 
 	-moz-border-radius:10px; 
 	-webkit-border-radius:10px; 
-	color: #dadada;
-	background: none;
+	color: #353535;
+	background: #dadada;
 	height: 25px;
 }
 
@@ -243,8 +243,8 @@ input[type='text'].search{
 	border-radius:10px; 
 	-moz-border-radius:10px; 
 	-webkit-border-radius:10px; 
-	color: #dadada;
-	background: url('../images/search.png') no-repeat 10px center;
+	color: #353535;
+	background: #dadada url('../images/search.png') no-repeat 10px center;
 	background-size: 10%;
 	padding-left:30px;
 	border: 1px solid white;
